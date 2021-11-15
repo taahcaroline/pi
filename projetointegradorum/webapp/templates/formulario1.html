@@ -1,5 +1,170 @@
 {% extends "base.html" %}
 {% block content %}
+<style>
+    .dadosiniciais
+    {
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    legend{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    fieldset {
+        text-align: justify;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-indent: 20px;
+    }
+</style>
+
     <h3>Formulários</h3>
+    <form action="." method="POST"><h4>CHECK LIST DE VERIFICAÇÃO PARA PRÉ START UP</h4><br>
+{% csrf_token %}
+<div class="dadosiniciais">
+USINA: {{ form.usina }}
+DATA DE INSPEÇÃO: {{ form.datainsp }}
+</div>
+
+RPE
+<fieldset id="sinalizacao"><legend>SINALIZAÇÃO</legend>															
+											
+	<p> As áreas, vias de acesso, e equipamentos críticos estão sinalizados com placas de advertência/orientativas (espaços confinados, painéis elétricos, desníveis, vasos de pressão, etc...)?*</p>														
+               <p>{{ form.opcoes }}</p>
+                <p>Observação: {{ form.observacoes }}</p>
     
+													
+	<p>A sinalização está legível e limpa?*</p>
+                 {{ form.opcoes2 }}
+                <p>Observação: {{ form.observacoes2 }}</p>												
+												
+	<p>As escadas tipo marinheiro com abertura no mesmo nível do piso (alçapões) estão sinalizadas ou possuem restrição de acesso?</p>
+    {{ form.opcoes3 }}
+    <p>Observação: {{ form.observacoes3 }}</p>										
+															
+	<p>As áreas classificadas estão isoladas, sinalizadas e com restrição de entrada?*</p>
+    {{ form.opcoes4 }}
+    <p>Observação: {{ form.observacoes4 }}</p>							
+<p>As faixas demarcatórias de piso internas e externas do setor (acesso seguro) estão conservadas?*</p>
+    {{ form.opcoes5 }}
+    <p>Observação: {{ form.observacoes5 }}</p>																							
+															
+<p>Os desníveis de piso estão sinalizados com faixas zebradas?*</p>
+{{ form.opcoes6 }}
+<p>Observação: {{ form.observacoes6 }}</p>													
+															
+	<p>Conservação das linhas de vida são suficientes para garantir a segurança durante a atividade. possui ART por Profissional Habilitado?*></p>	
+    {{ form.opcoes7 }}
+    <p>Observação: {{ form.observacoes7 }}</p>												
+															
+	<p>Os guarda corpo e corrimões estão em condições operacionais?*></p>
+    {{ form.opcoes8 }}
+    <p>Observação: {{ form.observacoes8 }}</p>
+	</fieldset>														
+<fieldset><legend>SISTEMA FIXO DE INCÊNDIO</legend>															
+															
+															
+											,
+	<p>Reserva de técnica de incêndio esta cheia com capacidade de atuação?*</p>
+    {{ form.opcoes9 }}
+    <p>Observação: {{ form.observacoes9 }}</p>														
+															
+	<p>Circuito de tubulações (hidrantes, anel resfriamento e espuma estão bem fixadas e livre quedas de sua estrutura (pipe rack)?*</p>	
+    {{ form.opcoes10 }}
+    <p>Observação: {{ form.observacoes10 }}</p>													
+															
+	<p>Todos os manômetros estão calibrados e instalados corretamente?*</p>
+    {{ form.opcoes11 }}
+    <p>Observação: {{ form.observacoes11 }}</p>														
+															
+	<p>Sistema de bobeamento foi manutenido e encontra-se em condições de operação?*</p>	
+    {{ form.opcoes12 }}
+    <p>Observação: {{ form.observacoes12 }}</p>													
+>								
+	<p>Foram realizado testes nas bombas de incêndio (jockey, elétrica e combustão)?*</p>
+    {{ form.opcoes13 }}
+    <p>Observação: {{ form.observacoes13 }}</p>											
+															
+	<p>As válvulas automaticas do circuito de tubulação foram revisadas em condições de operação?*</p>	
+    {{ form.opcoes14 }}
+    <p>Observação: {{ form.observacoes14 }}</p>												
+															
+	<p>Sistema LGE- Liquido Gerador de Espuma encontra-se disponivel e em condições de operações?*</p>
+    {{ form.opcoes15 }}
+    <p>Observação: {{ form.observacoes15 }}</p>												
+															
+	<p>Sistema firemiks proporcionador de espuma encontra-se em condições de operações?*</p>	
+    {{ form.opcoes16 }}
+    <p>Observação: {{ form.observacoes16 }}</p>			
+															
+	<p>Os hidrantes e caixas com acessórios foram testados e estão em condições de operação? A quantidade atende requisitos minimos?*</p>	
+    {{ form.opcoes17 }}
+    <p>Observação: {{ form.observacoes17 }}</p>										
+															
+	<p>Extintores estão distribuido de acordo com a especificação, quantidade e capacidade adequada?*</p>	
+    {{ form.opcoes18 }}
+    <p>Observação: {{ form.observacoes18 }}</p>															
+															
+<fieldset><legend>ARMAZENAGEM E DESCARREGAMENTO DE PRODUTOS</legend>															
+															
+		
+	<p>Todos os produtos químicos estão contidos em bacias de contenção ou protegidos por dispositivos de contenção?*</p>	
+    {{ form.opcoes19 }}
+    <p>Observação: {{ form.observacoes19 }}</p>														
+															
+	<p>Os locais de armazenamento de produtos quimicos possuem Kit's de emergência Ambiental?*</p>	
+    {{ form.opcoes20 }}
+    <p>Observação: {{ form.observacoes29 }}</p>															
+															
+	<p>Os locais de armazenamento de produtos quimicos estão dotados de chuveiros lava olhos?*</p>	
+    {{ form.opcoes21 }}
+    <p>Observação: {{ form.observacoes21 }}</p>														
+															
+	<p>As bacias de contenção estão em boas condições e não apresentam trincas ou rachaduras?*</p>	
+    {{ form.opcoes22 }}
+    <p>Observação: {{ form.observacoes22 }}</p>															
+															
+	<p>As bacias de contenção estão impermeabilizadas?*	</p>
+    {{ form.opcoes23 }}
+    <p>Observação: {{ form.observacoes23 }}</p>				
+															
+	<p>As válvulas das baciais de contenção estão fechadas?*</p>
+    {{ form.opcoes24 }}
+    <p>Observação: {{ form.observacoes24 }}</p>																
+															
+	<p>Os tanques de armazenamento e tubulações foram manutenidos e não se observa vazamentos (teste prévio hidrostático após a drenagem completa da linha e antes da manutenção)*</p>														
+    {{ form.opcoes25 }}
+    <p>Observação: {{ form.observacoes25 }}</p>											
+	<p>Os tanques de armazenamento e pontos de descarregamento estão sinalizados*</p>
+    {{ form.opcoes26 }}
+    <p>Observação: {{ form.observacoes26 }}</p>																
+															
+	<p>As mangueiras e acoplamentos para descarregamentos estão em perfeito estado de conservação*</p>	
+    {{ form.opcoes27 }}
+    <p>Observação: {{ form.observacoes27 }}</p>
+	<p>O sistema de bombeamento foi manutenido e está sem vazamentos (teste prévio hidrostático após a drenagem completa da linha e antes da manutenção)*</p>
+    {{ form.opcoes28 }}
+    <p>Observação: {{ form.observacoes28 }}</p>											
+																						
+<p>Os produtos quimicos estão acompanhados das respectivas FISPQ's*</p>
+{{ form.opcoes29 }}
+<p>Observação: {{ form.observacoes29 }}</p>														
+															
+	<p>Foi feita a drenagem da tubulação e posterior teste hidrostático para checagem de vazamentos*</p>
+    {{ form.opcoes30 }}
+    <p>Observação: {{ form.observacoes30 }}</p>
+															
+	<p>Os flanges estão com as camisas de proteção exigidas*</p>	
+    {{ form.opcoes31 }}
+    <p>Observação: {{ form.observacoes31 }}</p>
+									
+						
+	<p>O local de estacionamento dos caminhões para descarregamento de produtos quimicos está impermeabilizado e possui sistema de contenção?*</p>	
+    {{ form.opcoes32 }}
+    <p>Observação: {{ form.observacoes32 }}</p>												
+</fieldset>															
+														
+    <button class="btn btn-dark" type="submit">Enviar</button>													
+</form>
+
+
 {% endblock %}
