@@ -9,8 +9,8 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.template import RequestContext, context
 from django.core.mail import send_mail, BadHeaderError
+from webapp.forms import MeuFormularioForm
 
-from webapp.forms import MeuFormulario
 
 
 def home(request):
@@ -25,20 +25,13 @@ def sobre(request):
 
 @login_required 
 def formulario1(request):
-    if request.method == 'GET':
-      form = MeuFormulario()
-      context = {
-        'form' : form
-    }
-      form = MeuFormulario
-      return render(request, 'formulario1.html', context = context)  
-    else:
-     form = MeuFormulario(request.POST)
-     if form.is_valid():
-         print(form.cleaned_data)
+      form = MeuFormularioForm(request.POST or None)
+      if request.method == 'POST':
+       form.save()
      
     
-    return render(request, 'formulario1.html')
+      return render(request, 'formulario1.html', {'form': form})  
+   
    
 
 @login_required 

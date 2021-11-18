@@ -18,7 +18,10 @@
 </style>
 
     <h3>Formulários</h3>
-    <form action="." method="POST"><h4>CHECK LIST DE VERIFICAÇÃO PARA PRÉ START UP</h4><br>
+    {% if message %}
+      {{message}}
+    {% endif %}
+    <form action="." method="POST" id="formweb"><h4>CHECK LIST DE VERIFICAÇÃO PARA PRÉ START UP</h4><br>
 {% csrf_token %}
 <div class="dadosiniciais">
 USINA: {{ form.usina }}
@@ -30,7 +33,7 @@ RPE
 											
 	<p> As áreas, vias de acesso, e equipamentos críticos estão sinalizados com placas de advertência/orientativas (espaços confinados, painéis elétricos, desníveis, vasos de pressão, etc...)?*</p>														
                <p>{{ form.opcoes }}</p>
-                <p>Observação: {{ form.observacoes }}</p>
+                <p>Observação: {{ form.observacoes1 }}</p>
     
 													
 	<p>A sinalização está legível e limpa?*</p>
@@ -163,8 +166,9 @@ RPE
     <p>Observação: {{ form.observacoes32 }}</p>												
 </fieldset>															
 														
-    <button class="btn btn-dark" type="submit">Enviar</button>													
+    <button class="btn btn-dark" type="submit" align="center">Enviar</button>													
 </form>
 
 
 {% endblock %}
+
