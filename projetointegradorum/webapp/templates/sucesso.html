@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+    .dadosiniciais
+    {
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    legend{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    fieldset {
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-indent: 20px;
+    }
+    .nomeedata {
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-indent: 20px;
+        font-weight: bold;
+    }
+    h3{
+    text-align: center;
+    padding-top: 20px;
+    color:#070a57;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+h4{
+    text-align: center;
+    padding-top: 20px;
+    color:#070a57;
+    font-size: 16px;
+    font-weight: bold;
+}</style>
+    <h4>CHECK LIST DE VERIFICAÇÃO PARA PRÉ START UP</h4><br>
+    <div class="nomeedata">
+    USINA: {{ form_data.usina }} <br>
+    DATA DE INSPEÇÃO: {{ form_data.datainsp }}<br/></div>
+    <br/>
+    <fieldset><legend><h3>SINALIZAÇÃO</h3></legend>   
+    
+        <div class="p-3 mb-2 bg-secondary text-white"> <p> As áreas, vias de acesso, e equipamentos críticos estão sinalizados com placas de advertência/orientativas (espaços confinados, painéis elétricos, desníveis, vasos de pressão, etc...)?*</p></div>													
+    <p>Resultado da verificação: {{ form_data.opcoes }}</p>
+
+
+                  
+    <div class="p-3 mb-2 bg-secondary text-white"> <p>A sinalização está legível e limpa?*</p></div>
+<p> Resultado da verificação: {{ form_data.opcoes2 }}	</p>										
+                                     
+<div class="p-3 mb-2 bg-secondary text-white"> <p>As escadas tipo marinheiro com abertura no mesmo nível do piso (alçapões) estão sinalizadas ou possuem restrição de acesso?</p></div>
+<p>Resultado da verificação: {{ form_data.opcoes3 }}</p>
+									
+                                                 
+<div class="p-3 mb-2 bg-secondary text-white"> <p>As áreas classificadas estão isoladas, sinalizadas e com restrição de entrada?*</p></div>
+<p>Resultado da verificação: {{ form_data.opcoes4 }}</p>
+						
+<div class="p-3 mb-2 bg-secondary text-white"> <p>As faixas demarcatórias de piso internas e externas do setor (acesso seguro) estão conservadas?*</p></div>
+<p>Resultado da verificação: {{ form_data.opcoes5 }}</p>
+																							
+                                                 
+<div class="p-3 mb-2 bg-secondary text-white"> <p>Os desníveis de piso estão sinalizados com faixas zebradas?*</p></div>
+<p>Resultado da verificação: {{ form_data.opcoes6 }}</p>
+													
+                                                 
+<div class="p-3 mb-2 bg-secondary text-white"> <p>Conservação das linhas de vida são suficientes para garantir a segurança durante a atividade. possui ART por Profissional Habilitado?*></p></div>
+<p>Resultado da verificação: {{ form_data.opcoes7 }}</p>
+											
+                                                 
+<div class="p-3 mb-2 bg-secondary text-white"> <p>Os guarda corpo e corrimões estão em condições operacionais?*></p></div>
+<p>Resultado da verificação: {{ form_data.opcoes8 }}</p>
+
+</fieldset>					<br/>	<br/>								
+<fieldset><legend><h3>SISTEMA FIXO DE INCÊNDIO</h3></legend>															
+                                                 
+                                                 
+ <div class="p-3 mb-2 bg-secondary text-white"> <p>Reserva de técnica de incêndio esta cheia com capacidade de atuação?*</p></div>
+<p>Resultado da verificação: {{ form_data.opcoes9 }}</p>
+														
+                                                 
+<div class="p-3 mb-2 bg-secondary text-white"><p>Circuito de tubulações (hidrantes, anel resfriamento e espuma estão bem fixadas e livre quedas de sua estrutura (pipe rack)?*</p></div>
+<p>Resultado da verificação: {{ form_data.opcoes10 }}</p>
+												
+                                                 
+<div class="p-3 mb-2 bg-secondary text-white"><p>Todos os manômetros estão calibrados e instalados corretamente?*</p></div>
+<p>Resultado da verificação: {{ form_data.opcoes11 }}</p>
+												
+                                                 
+<div class="p-3 mb-2 bg-secondary text-white"><p>Sistema de bobeamento foi manutenido e encontra-se em condições de operação?*</p></div>	
+<p>Resultado da verificação: {{ form_data.opcoes12 }}</p>
+																				
+<div class="p-3 mb-2 bg-secondary text-white"><p>Foram realizado testes nas bombas de incêndio (jockey, elétrica e combustão)?*</p></div>
+<p>Resultado da verificação: {{ form_data.opcoes13 }}</p>
+										
+                                                 
+<div class="p-3 mb-2 bg-secondary text-white"><p>As válvulas automaticas do circuito de tubulação foram revisadas em condições de operação?*</p></div>
+<p>Resultado da verificação: {{ form_data.opcoes14 }}</p>
+												
+                                                 
+<div class="p-3 mb-2 bg-secondary text-white"><p>Sistema LGE- Liquido Gerador de Espuma encontra-se disponivel e em condições de operações?*</p></div>
+<p>Resultado da verificação: {{ form_data.opcoes15 }}</p>
+
+<p>Observação geral: {{ form_data.observacoes1 }}</p>
+									
+{% endblock %}
